@@ -6,3 +6,6 @@ reset:
 
 setup:
 	scripts/setup.sh
+
+dockerfile:
+	@eval $$(egrep -v '^#' .env | xargs) ./scripts/generate.sh > Dockerfile
