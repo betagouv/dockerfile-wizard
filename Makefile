@@ -9,3 +9,4 @@ setup:
 
 dockerfile:
 	@eval $$(egrep -v '^#' .env | xargs) ./scripts/generate.sh > Dockerfile
+	@eval $$(egrep -v '^#' .env | xargs) ./scripts/generate_install_pip.sh >> Dockerfile
