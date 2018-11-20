@@ -1,7 +1,7 @@
 FROM buildpack-deps:trusty
 RUN apt-get update
 RUN wget https://nodejs.org/dist/v6.14.1/node-v6.14.1.tar.gz &&     tar -xzvf node-v6.14.1.tar.gz &&     rm node-v6.14.1.tar.gz &&     cd node-v6.14.1 &&     ./configure &&     make -j4 &&     make install &&     cd .. &&     rm -r node-v6.14.1
-RUN wget https://www.python.org/ftp/python/2.7.6/Python-2.7.6.tgz &&     tar xzf Python-2.7.6.tgz &&     rm Python-2.7.6.tgz &&     cd Python-2.7.6 &&     ./configure &&     make install
+RUN wget https://www.python.org/ftp/python/3.7.1/Python-3.7.1.tgz &&     tar xzf Python-3.7.1.tgz &&     rm Python-3.7.1.tgz &&     cd Python-3.7.1 &&     ./configure &&     make install
 RUN git clone https://github.com/sstephenson/bats.git   && cd bats   && ./install.sh /usr/local   && cd ..   && rm -rf bats
 RUN perl -MCPAN -e 'install TAP::Parser'
 RUN perl -MCPAN -e 'install XML::Generator'
