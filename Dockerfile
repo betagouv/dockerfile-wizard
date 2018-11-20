@@ -20,4 +20,4 @@ RUN curl --silent --show-error --location --fail --retry 3 --output /tmp/google-
 # install chromedriver
 RUN apt-get -y install libgconf-2-4   && curl --silent --show-error --location --fail --retry 3 --output /tmp/chromedriver_linux64.zip "http://chromedriver.storage.googleapis.com/2.33/chromedriver_linux64.zip"   && cd /tmp   && unzip chromedriver_linux64.zip   && rm -rf chromedriver_linux64.zip   && mv chromedriver /usr/local/bin/chromedriver   && chmod +x /usr/local/bin/chromedriver
 # install pip
-RUN apt-get install python-pip
+RUN apt-get -y install python-pip
